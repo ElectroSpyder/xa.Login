@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xa.UI.App.Views.HomePage"
+              xmlns:local="clr-namespace:xa.UI.App.Controls" BackgroundColor="#2f4259">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="{Binding Background}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" HorizontalOptions="CenterAndExpand" 
+                           WidthRequest="45" HeightRequest="45"
+                           Margin="24"
+                           Source="{Binding Logo}"/>
+            <Image Grid.Row="1" HorizontalOptions="CenterAndExpand" 
+                           WidthRequest="120" HeightRequest="120"
+                           Margin="24"
+                           Source="{Binding Picture}"/>
+            <Label Grid.Row="2" TextColor="{Binding Foreground}" Text="{Binding Id}" HorizontalOptions="CenterAndExpand" />
+            <Label Grid.Row="3" TextColor="{Binding Foreground}" Text="{Binding Name}" HorizontalOptions="CenterAndExpand" />
+            <Button Grid.Row="4" FontAttributes="Bold" VerticalOptions="EndAndExpand" Text="Logout" TextColor="{Binding Foreground}"  HorizontalOptions="CenterAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

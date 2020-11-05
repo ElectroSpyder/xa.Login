@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xa.UI.App.Views.LoginPage"
+              xmlns:local="clr-namespace:xa.UI.App.Controls" BackgroundColor="#2f4259">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                x:Name="mainLayout"
+                Padding="40"
+                Spacing="10">
+
+
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Login Aplication"
+                    TextColor="White"
+                    FontSize="40">
+                </Label>
+
+                <local:ImageEntry TextColor="White"
+                                  PlaceholderColor="{StaticResource primary}"
+                                  Image="User"
+                                  Placeholder="Email"
+                                  HorizontalOptions="FillAndExpand" />
+                <local:ImageEntry TextColor="White"
+                                  PlaceholderColor="{StaticResource primary}"
+                                  Image="Password"
+                                  Placeholder="Contraseña"
+                                  HorizontalOptions="FillAndExpand" />
+
+                <Button HeightRequest="50"
+                        TextColor="White"
+                        Text="Login"
+                        BackgroundColor="{StaticResource primary}"
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Olvido la Contraseña?"
+                       HorizontalOptions="Center"
+                       TextColor="{StaticResource primary}" />
+
+                <Label Margin="0,0,0,20"
+                       Text="No tengo Usuario"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="Center"
+                       TextColor="{StaticResource primary}">
+                </Label>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
